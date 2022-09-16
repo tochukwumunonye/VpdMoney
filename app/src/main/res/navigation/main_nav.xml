@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/userFragment">
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.vpdmoney.presentation.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="selectedUser"
+            app:argType="com.example.vpdmoney.data.remote.dto.UsersDtoItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.vpdmoney.presentation.list.UserFragment"
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/action_userFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+</navigation>
