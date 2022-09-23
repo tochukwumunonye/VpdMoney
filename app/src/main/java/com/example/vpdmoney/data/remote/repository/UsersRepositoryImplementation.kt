@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class UsersRepositoryImplementation @Inject constructor(
-    private val api: APIService
+    private val api: APIService,
 ): UsersRepository{
 
     override suspend fun getUsersFromServer(): Flow<List<UsersDtoItem>> = flow {
